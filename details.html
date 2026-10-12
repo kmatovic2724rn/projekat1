@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Detalji eksponata - The Met</title>
+        <link rel="icon" href="ikonica.avif">
+        <link rel="stylesheet" href="css/stil.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body class="p-3">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="pocetna.html">
+                    <img src="ikonica.avif" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Prikaži meni">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Odeljenja
+                            </a>
+                            <ul class="dropdown-menu" id="departments-menu">
+                                <li><span class="dropdown-item">Učitavanje odeljenja...</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" action="department.html" method="get">
+                        <input class="form-control me-2" type="search" name="q" placeholder="Pretraži eksponate" aria-label="Pretraži eksponate" required>
+                        <button class="btn btn-outline-success" type="submit">Pretraga</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <main class="container mt-4">
+            <a href="#" id="back-link" class="btn btn-outline-secondary mb-3" onclick="history.back(); return false;">&larr; Nazad</a>
+            <p id="status">Učitavanje eksponata...</p>
+
+            <div id="artwork" class="row g-4" hidden>
+                <div class="col-md-6 text-center">
+                    <img id="artwork-image" src="" alt="Slika eksponata" class="img-fluid rounded detalji-slika">
+                </div>
+                <div class="col-md-6">
+                    <h1 id="artwork-title"></h1>
+                    <dl id="artwork-info" class="row"></dl>
+                    <a id="artwork-link" href="#" target="_blank" rel="noopener" class="btn btn-success" hidden>Pogledaj na sajtu muzeja</a>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="common.js"></script>
+        <script src="details.js"></script>
+    </body>
+</html>
