@@ -1,0 +1,16 @@
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.muzej-slika {
+    max-height: 450px;
+}
+
+.detalji-slika {
+    max-height: 600px;
+}
